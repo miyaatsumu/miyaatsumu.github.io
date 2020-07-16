@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haikyuu!! dream team</title>
+</head>
+<style>
+    body {
+  background-color: #F5F5F5;
+}
+
+h1 {
+  font-family: arial;
+  color: black;
+  text-align: center;
+    font-size: 60px;
+}
+
+p {
+  font-family: arial;
+  font-size: 18px;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+    
+h2 {
+  font-family: arial;
+  font-size: 13px;
+  text-align: center;
+}
+    
+    #button{
+     background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;   
+    }
+    
+    button:hover {
+  background-color: #ff8b43;
+}
+    p,
+label {
+    font-family: Arial;
+    text-align: center;
+}
+
+input {
+    margin: 5px;
+}
+
+
+    h3{
+        font-family: arial;
+        font-size: 14px;
+    }
+
+    #result{
+        font-family: arial;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    </style>
+<body>
+   <p><img src="/Media/logo.png" alt="hq logo" style="width: 880px"></p>
+<p>By answering this quiz, I will make your very own <i>Haikyuu!!</i> dream team.</p>
+<h2>Some inaccuracies regarding volleyball positions may occur. I apologize beforehand.</h2><br><br>
+
+      
+    <h3>Setter:</h3>
+    <input type="radio" name="Setter" value="Kageyama"><label for="Kageyama">Kageyama</label> 
+    <input type="radio" name="Setter" value="Kenma"><label for="Kenma">Kenma</label> 
+    <input type="radio" name="Setter" value="Oikawa"><label for="Oikawa">Oikawa</label> 
+
+              
+    <br> 
+      
+    <h3>Middle blocker: </h3>
+    <input type="radio" name="Middle Blocker" value="Hinata"><label for="Hinata">Hinata</label> 
+    <input type="radio" name="Middle Blocker" value="Kuroo"><label for="Kuroo">Kuroo</label>  
+    <input type="radio" name="Middle Blocker" value="Tsukishima"><label for="Tsukishima">Tsukishima</label>  
+
+      
+    <br> 
+         
+     <h3>Libero:</h3>
+    <input type="radio" name="Libero" value="Nishinoya"><label for="Nishinoya">Nishinoya</label>  
+    <input type="radio" name="Libero" value="Yaku"><label for="Yaku">Yaku</label>  
+    <input type="radio" name="Libero" value="Shion"><label for="Shion">Shion</label>  
+
+      
+    <br> 
+     
+    <h3>Opposite hitter: </h3>
+    <input type="radio" name="Opposite Hitter" value="Hinata"><label for="Hinata">Hinata</label>  
+    <input type="radio" name="Opposite Hitter" value="Sawamura"><label for="Sawamura">Sawamura</label>  
+    <input type="radio" name="Opposite Hitter" value="Osamu"><label for="Osamu">Osamu</label>  
+
+    <br> 
+     
+    <h3>Coach: </h3>
+    <input type="radio" name="Coach" value="Ukai Keishin"><label for="Ukai Keishin">Ukai Keishin</label>  
+    <input type="radio" name="Coach" value="Nekomata Yasufumi"><label for="Sawamura">Nekomata Yasufumi</label>  
+    <input type="radio" name="Coach" value="Takeda Ittetsu"><label for="Takeda Ittetsu">Takeda Ittetsu</label>  
+    
+     <br> 
+     
+    <h3>Manager: </h3>
+    <input type="radio" name="Manager" value="Shimizu Kiyoko"><label for="Shimizu Kiyoko">Shimizu Kiyoko</label>  
+    <input type="radio" name="Manager" value="Yachi Hitoka"><label for="Yachi Hitoka">Yachi Hitoka</label>  
+    <input type="radio" name="Manager" value="Shirofuku Yukie"><label for="Shirofuku Yukie">Shirofuku Yukie</label>  
+    
+    <br><br>
+     
+      
+    <button type="button" id="button" onclick="displayRadioValue()"> 
+        Submit 
+    </button> 
+      
+    <br> <br>
+    
+    <div id="result"></div> 
+    
+<script>
+       function displayRadioValue() { 
+            document.getElementById("result").innerHTML = ""; 
+            var ele = document.getElementsByTagName('input'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                  
+                if(ele[i].type="radio") { 
+                  
+                    if(ele[i].checked) 
+                        document.getElementById("result").innerHTML 
+                                += ele[i].name + ": " 
+                                + ele[i].value + "<br>"; 
+                } 
+            } 
+        } 
+    
+    </script>
+
+</body>
+</html>
+
+
